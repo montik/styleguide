@@ -1,4 +1,5 @@
-<div class="{{viewClass}}">
+<link id="center-stylesheet" rel="stylesheet" type="text/css" ng-href="{{currentCss.url}}">
+<div class="{{viewClass}}" ng-class="{'view-section--hidden': !currentCss}">
 <div id="socketDisconnection" class="sg disconnection-icon" title="no socket connection" ng-hide="socketService.isConnected()" ng-if="socketService.isAvailable()">
   <i class="fa fa-chain-broken"></i>
 </div>
@@ -57,8 +58,13 @@
         </li>
       </ul>
     </li>
+		<li class="sg-theme-container">
+			<button class="sg-theme-button" title="{{css.group + ' - ' + css.linie}}" ng-click="updateCurrentCss(css)" ng-repeat="css in themes"
+				style="color: {{css.primary}}; background-color: {{css.secondary}}"></button>
+		</li>
   </ul>
 </nav>
+
 
 <div class="sg sg-wrapper full-height" ng-class="{'designerToolVisible' : designerTool.isVisible, 'collapsed' : toggleMenu}" ng-if="isSideNav() === 'topNav'">
   <section ui-view class="sg sg-body full-width">
@@ -120,20 +126,7 @@
   <section ui-view class="sg sg-body" ng-class="{'full-width': !toggleMenu}">
   </section>
 </div>
-
-<div sg-design></div>
 </div>
+<div class="css-loading">Getting Css...</div>
 <footer class="sg sg-footer">
-  <div class="sg sg-content">
-    <p>
-      <a class="sg" ng-click="toggleMarkup()" ng-show="markupSection.isVisible">Hide all markup</a>
-      <a class="sg" ng-click="toggleMarkup()" ng-hide="markupSection.isVisible">Show all markup</a>
-    </p>
-    <span class="sg">
-      Generated with the <a class="sg" target="_blank" href="http://styleguide.sc5.io/">styleguide engine</a> by
-    </span>
-    <a href="http://sc5.io/" target="_blank" title="SC5 - The Leading HTML5 Expert">
-      <img class="sg-logo" src="assets/img/sc5logo.svg" alt="SC5"/>
-    </a>
-  </div>
 </footer>
