@@ -36,6 +36,29 @@ body.sg {
   border: 0;
 }
 
+/* Loading CSS */
+.view-section {
+	transition: opacity .25s .5s;
+
+	&--hidden {
+		opacity: 0;
+	}
+}
+
+.css-loading {
+	display: none;
+	font-size: 24px;
+	left: 50%;
+	position: fixed;
+	top: 20px;
+	transform: translateX(-50%);
+}
+
+.view-section--hidden~.css-loading {
+	display: block;
+}
+
+
 /*
 Colors and typography
 
@@ -353,8 +376,7 @@ Styleguide 3.1.1
   display: flex;
   position: relative;
   overflow: hidden;
-  max-width: $content-max-width;
-  margin: 0 auto;
+	margin: 0;
   padding: $wrapper-vertical-padding $content-margin $wrapper-vertical-padding $min-content-margin;
   @media (--mobile) {
     display: block;
@@ -866,6 +888,7 @@ Styleguide 3.3.1
   background-color: $nav-background-color;
   z-index: 8000;
   width: 100%;
+	position: fixed;
 }
 
 .sg.sg-nav-visible {
@@ -1375,6 +1398,7 @@ Styleguide 4.1
 
 
 .sg.sg-design {
+	display: none;
   position: fixed;
   top: 0;
   left: 100%;
@@ -1717,7 +1741,7 @@ file: demo/testDirectiveTwo.js
 
 Styleguide 6.2
  */
- 
+
  /* styleguide:ignore:start */
 @mixin styleguide_custom_styles;
 /* styleguide:ignore:end */

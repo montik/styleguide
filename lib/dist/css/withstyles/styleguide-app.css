@@ -36,6 +36,29 @@ body.sg {
   border: 0;
 }
 
+/* Loading CSS */
+.view-section {
+	transition: opacity .25s .5s;
+}
+
+.view-section.view-section--hidden {
+	opacity: 0;
+}
+
+.css-loading {
+	display: none;
+	font-size: 24px;
+	left: 50%;
+	position: fixed;
+	top: 20px;
+	transform: translateX(-50%);
+}
+
+.view-section--hidden~.css-loading {
+	display: block;
+}
+
+
 /*
 Colors and typography
 
@@ -353,9 +376,8 @@ Styleguide 3.1.1
   display: flex;
   position: relative;
   overflow: hidden;
-  max-width: $content-max-width;
   margin: 0 auto;
-  padding: $wrapper-vertical-padding $content-margin $wrapper-vertical-padding $min-content-margin;
+  padding: 80px 0 0 0;
   @media (--mobile) {
     display: block;
     padding: 0;
@@ -866,6 +888,7 @@ Styleguide 3.3.1
   background-color: $nav-background-color;
   z-index: 8000;
   width: 100%;
+	position: fixed;
 }
 
 .sg.sg-nav-visible {
@@ -1211,17 +1234,18 @@ Styleguide 3.5
   margin-bottom: 20px;
 
   .sg.sg-section-partial {
+		border-top: 1px solid hsl(0, 0%, 80%);
     position: relative;
-
     overflow: auto;
-
-    padding: 1em;
-
-    border: 1px solid var(--secondary-color);
-    border: 1px solid $secondary-color;
+		padding: 1rem 0;
     border-bottom: none;
     background: #fff;
     width: 100%;
+
+		&--mods, &--desc {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
   }
 
   .sg.sg-section-partial:last-child {
@@ -1717,7 +1741,7 @@ file: demo/testDirectiveTwo.js
 
 Styleguide 6.2
  */
- 
+
  /* styleguide:ignore:start */
 @mixin styleguide_custom_styles;
 /* styleguide:ignore:end */

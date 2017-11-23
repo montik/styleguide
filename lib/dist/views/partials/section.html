@@ -11,7 +11,7 @@
       </h1>
     </a>
   </header>
-  <div class="sg sg-section-partial" ng-if="section.modifiers.length || section.description">
+  <div class="sg sg-section-partial sg-section-partial--desc" ng-if="section.modifiers.length || section.description">
     <div class="sg sg-section-description" ng-bind-html="section.description | unsafe"></div>
     <ul ng-if="section.modifiers.length" class="sg modifier-list">
       <li class="sg-item" ng-repeat="mod in section.modifiers">
@@ -20,7 +20,7 @@
     </ul>
   </div>
   <div ng-repeat-start="mod in section.modifiers"></div>
-  <div class="sg sg-section-partial">
+  <div class="sg sg-section-partial sg-section-partial--mods">
     <div class="sg sg-label">
       <a ui-sref="app.fullscreen({section: '{{section.reference}}-{{mod.id}}'})" target="_blank">
         <span class="sg sg-name" ng-bind-html="mod.name | unsafe"></span><i class="fa fa-arrows-alt"></i>

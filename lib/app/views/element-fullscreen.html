@@ -13,5 +13,6 @@
   </a>
 </div>
 <shadow-dom class="section-fullscreen">
+	<link rel="stylesheet" type="text/css" ng-href="{{currentCss.url}}">
   <div class="section-markup-wrapper" ng-bind-html="markup | addWrapper | unsafe" dynamic-compile></div>
 </shadow-dom>
