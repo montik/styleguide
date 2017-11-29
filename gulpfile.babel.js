@@ -17,6 +17,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     rimraf = require('gulp-rimraf'),
     distPath = 'lib/dist',
+		gulp = require('gulp'),
+		babel = require('gulp-babel'),
     fs = require('fs'),
     chalk = require('chalk'),
     outputPath = 'demo-output',
@@ -33,6 +35,7 @@ gulp.task('js:app', () => {
   .pipe(plumber())
   .pipe(ngAnnotate())
   .pipe(concat('app.js'))
+	.pipe(babel({ presets: ['env'] }))
   .pipe(gulp.dest(distPath + '/js'));
 });
 
