@@ -394,7 +394,7 @@ Styleguide 3.1.1
     height: 100%;
     @media (--mobile) {
       padding: 0.25em;
-      padding-top: 30px;
+      padding-top: 50px;
       width: 100%;
     }
     // Remove top margin from first header in markdown
@@ -886,9 +886,10 @@ Styleguide 3.3.1
   clear: both;
   background-color: var(--nav-background-color);
   background-color: $nav-background-color;
+	min-height: 40px;
   z-index: 8000;
   width: 100%;
-	//position: fixed;
+	position: fixed;
 }
 
 .sg.sg-nav-visible {
@@ -904,10 +905,6 @@ Styleguide 3.3.1
   margin-right: auto;
   list-style-type: none;
 
-  .designerToolVisible & {
-    margin-right: var(--designer-tool-width);
-    margin-right: $designer-tool-width;
-  }
 
   li {
     @mixin default-font;
@@ -1013,6 +1010,39 @@ Styleguide 3.3.1
     clear: both;
     height: 0;
   }
+
+
+  @media (--mobile) {
+		left: -11rem;
+		position: fixed;
+		transition: position  .5s;
+		width: 10rem;
+		z-index: 801;
+
+		&.active {
+			left: 0;
+		}
+
+		li:hover ul {
+			left: 100px;
+			top: 0;
+		}
+	}
+}
+
+.sg-top-nav-menu-icon {
+	color: white;
+	cursor: pointer;
+	display: none;
+	font-weight: bold;
+	line-height: 40px;
+	padding: 0 1rem;
+}
+
+@media (--mobile) {
+	.sg-top-nav-menu-icon {
+		display: inline-block;
+	}
 }
 
 .sg.toggle {

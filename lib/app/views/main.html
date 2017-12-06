@@ -5,7 +5,8 @@
 </div>
 
 <nav class="sg sg-top-nav" ng-class="{'designerToolVisible' : designerTool.isVisible, 'sg-nav-visible': isSideNav() === 'topNav'}">
-  <ul class="sg sg-top-nav-menu">
+	<div class="sg-top-nav-menu-icon" ng-click="menuActive = menuActive ? 0 : 1">MENU</div>
+  <ul class="sg sg-top-nav-menu" ng-class="{'active': menuActive}">
     <li class="sg-nav-item">
       <a class="sg sg-nav-link"
         ng-class="currentSection === 'overview' ? 'active' : ''"
