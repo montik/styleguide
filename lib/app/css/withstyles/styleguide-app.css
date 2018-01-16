@@ -882,6 +882,7 @@ Styleguide 3.3.1
  */
 
 .sg.sg-top-nav {
+	border-bottom: 1px solid hsla(0, 100%, 100%, .2);
   display: none;
   clear: both;
   background-color: var(--nav-background-color);
@@ -1755,6 +1756,10 @@ Styleguide 6.1
   border: 2px solid red;
   display: initial;
   cursor: pointer;
+}
+
+.template-wrapper {
+	display: grid;
 }
 
 
