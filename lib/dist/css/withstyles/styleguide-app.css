@@ -1759,6 +1759,8 @@ Styleguide 6.1
 }
 
 .template-wrapper {
+	/* grid prevent the fixed positioned menu to bump out of the shadow dom -> in IE it doesnt work */
+	/* autoprefixer: off */
 	display: grid;
 }
 
