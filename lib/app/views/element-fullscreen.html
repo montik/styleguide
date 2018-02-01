@@ -14,6 +14,6 @@
 </div>
 <shadow-dom class="section-fullscreen"-->
 	<link rel="stylesheet" type="text/css" ng-href="{{currentCss.url}}">
-  <div class="section-markup-wrapper view-section" ng-class="{'view-section--hidden': !currentCss}" ng-bind-html="markup | addWrapper | unsafe" dynamic-compile></div>
+  <div class="section-markup-wrapper view-section view-section--fullscreen" ng-class="{'view-section--hidden': !currentCss}" ng-bind-html="markup | unsafe" dynamic-compile></div>
 	<div class="css-loading">Getting Css...</div>
 <!--/shadow-dom-->
