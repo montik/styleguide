@@ -27,7 +27,7 @@
       </a>
     </div>
     <shadow-dom id="section-{{section.reference}}-modifier-{{mod.id}}-render-markup">
-      <div class="section-markup-wrapper" ng-bind-html="mod.renderMarkup | setModifierClass: mod.className | setVariables: variables | addWrapper | unsafe" dynamic-compile></div>
+      <div class="section-markup-wrapper" ng-bind-html="mod.markup | addSectionWrapper: section.sgWrapper | setModifierClass: mod.className | addWrapper | unsafe" dynamic-compile></div>
     </shadow-dom>
   </div>
   <div ng-repeat-end></div>
@@ -41,7 +41,7 @@
     </div>
 
     <shadow-dom id="section-{{section.reference}}-render-markup">
-      <div class="section-markup-wrapper" ng-bind-html="section.renderMarkup | setVariables: variables | addWrapper | unsafe" dynamic-compile></div>
+      <div class="section-markup-wrapper" ng-bind-html="section.markup | addSectionWrapper: section.sgWrapper | addWrapper | unsafe" dynamic-compile></div>
     </shadow-dom>
   </div>
 
