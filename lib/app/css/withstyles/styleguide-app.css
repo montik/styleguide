@@ -136,8 +136,8 @@ h5.sg {
   font-weight: normal;
   font-style: normal;
   line-height: 1.2;
-  margin: 1.414em 0 .5em;
-  color: #444;
+  margin: 1.4 0 .75em;
+  color: hsl(0, 0%, 10%);
 }
 
 h1.sg {
@@ -151,7 +151,12 @@ h2.sg {
 }
 
 h3.sg {
-  font-size: 1.777em;
+  font-size: 1.15em;
+	text-transform: uppercase;
+}
+h3.sg::before {
+	content: "> ";
+	vertical-align: -2px;
 }
 
 h4.sg {
