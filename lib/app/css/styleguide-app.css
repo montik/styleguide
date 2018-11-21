@@ -381,7 +381,8 @@ Styleguide 3.1.1
   display: flex;
   position: relative;
   overflow: hidden;
-	margin: 0;
+	margin: 0 auto;
+  max-width: 990px;
   padding: $wrapper-vertical-padding $content-margin $wrapper-vertical-padding $min-content-margin;
   @media (--mobile) {
     display: block;
@@ -1292,7 +1293,6 @@ Styleguide 3.5
 }
 
 .sg.sg-body section.sg.sg-section:last-of-type {
-  margin-bottom: 0;
   min-height: calc(100vh - #{$header_height} - #{$footer-logo-height} - #{$wrapper-vertical-padding});
 }
 

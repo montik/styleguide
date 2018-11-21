@@ -156,7 +156,7 @@ h3.sg {
 }
 h3.sg::before {
 	content: "> ";
-	vertical-align: -2px;
+	vertical-align: 2px;
 }
 
 h4.sg {
@@ -1267,7 +1267,11 @@ Styleguide 3.5
  */
 
 .sg.sg-section {
-  margin-bottom: 20px;
+  border: 1px solid hsla(0, 0%, 80%, 1);
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 990px;
+  overflow: hidden;
 
   .sg.sg-section-partial {
 		border-top: 1px solid hsl(0, 0%, 80%);
