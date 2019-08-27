@@ -1,5 +1,5 @@
 <section id="section-{{section.reference}}" class="sg sg-section"
-  ng-class="{active: isActive(section), main: isEmptyMainSection(section)}">
+  ng-class="{active: isActive(section), 'sg-section--wide': isOrganism(section), main: isEmptyMainSection(section)}">
   <header class="sg sg-section-header">
     <a ui-sref="app.index.section({section: '{{section.reference}}'})">
       <i class="fa fa-link"></i>

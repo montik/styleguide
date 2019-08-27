@@ -42,7 +42,7 @@
 
 
 <div class="sg sg-wrapper full-height" ng-class="{'designerToolVisible' : designerTool.isVisible, 'collapsed' : toggleMenu}" ng-if="isSideNav() === 'topNav'">
-  <section ui-view class="sg sg-body full-width">
+  <section ui-view class="sg sg-body full-width" ng-class="currentSection === 'overview' ? 'sg-body--overview' : ''">
   </section>
 </div>
 
